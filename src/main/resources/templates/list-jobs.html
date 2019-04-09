@@ -11,7 +11,8 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #3 - Use the same list display from search.html -->
-
+    <h3 th:if="${jobs != null}" th:text="${jobs.size()} + ' Result(s)'"></h3>
+    <table th:if="${jobs != null}" th:replace="fragments :: job-list"></table>
 </div>
 
 </body>
